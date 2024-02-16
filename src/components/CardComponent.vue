@@ -17,7 +17,7 @@
             <div class="cell">
               <label>Price:</label>
             </div>
-            <div class="cell">${{ product.price.USD }}</div>
+            <div class="cell">${{ product.price.USD.toFixed(2) }}</div>
           </div>
           <div class="row">
             <div class="cell">

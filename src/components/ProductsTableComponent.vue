@@ -14,7 +14,7 @@
       <tr v-for="item in items" :key="item.id">
         <td><i :class="iconClassName(item)"></i></td>
         <td>{{ item.name }}</td>
-        <td>${{ item.price }}</td>
+        <td>${{ item.price.toFixed(2) }}</td>
         <td>{{ item.quantity }}</td>
         <td>${{ (item.quantity * item.price).toFixed(2) }}</td>
         <td class="center">
