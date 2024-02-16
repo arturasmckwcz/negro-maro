@@ -39,9 +39,9 @@
       </tbody>
     </table>
 
-    <div v-if="pastOrders.length > 0" class="spread">
+    <div v-if="pastOrders.length > 0" class="spread mt-1">
       <span></span>
-      <button class="btn btn-light" @click="clearPostOrders">
+      <button class="btn btn-dark" @click="clearPostOrders">
         &times; Clear
       </button>
     </div>
@@ -66,3 +66,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.mt-1 {
+  margin-top: 1em;
+}
+</style>

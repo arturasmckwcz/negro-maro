@@ -17,10 +17,15 @@
         <td>${{ item.price.toFixed(2) }}</td>
         <td>{{ item.quantity }}</td>
         <td>${{ (item.quantity * item.price).toFixed(2) }}</td>
-        <td class="center">
-          <button :class="buttonClassName" @click="handleButtonClick(item.id)">
-            {{ buttonText }}
-          </button>
+        <td class="right">
+          <span>
+            <button
+              :class="buttonClassName"
+              @click="handleButtonClick(item.id)"
+            >
+              {{ buttonText }}
+            </button>
+          </span>
         </td>
       </tr>
     </tbody>
@@ -53,5 +58,16 @@ export default {
 <style scoped>
 th {
   text-align: start;
+}
+.right {
+  position: relative;
+}
+.right span {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: grid;
+  place-items: center;
 }
 </style>
