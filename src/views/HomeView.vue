@@ -1,18 +1,20 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+  <SplashComponent />
+  <RecommendedComponent
+    :inventory="inventory"
+    :recommended="recommended"
+    :addToCart="addToCart"
+  />
 </template>
 
 <script>
+import SplashComponent from "@/components/SplashComponent.vue";
+import RecommendedComponent from "@/components/RecommendedComponent.vue";
 // @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
 
 export default {
   name: "HomeView",
-  components: {
-    HelloWorld,
-  },
+  components: { SplashComponent, RecommendedComponent },
+  props: ["inventory", "recommended", "addToCart"],
 };
 </script>
