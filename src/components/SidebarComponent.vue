@@ -16,37 +16,6 @@
           :handleButtonClick="deleteFromCart"
           :cart="true"
         />
-        <table v-if="false" class="cart-table">
-          <thead>
-            <tr>
-              <th><span class="sr-only">Product Image</span></th>
-              <th>Product</th>
-              <th>Price</th>
-              <th>Qty</th>
-              <th>Total</th>
-              <th><span class="sr-only">Actions</span></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="item in cartContent" :key="item.id">
-              <td><i :class="iconClassName(item)"></i></td>
-              <td>{{ item.name }}</td>
-              <td class="center">${{ item.price }}</td>
-              <td class="center">{{ item.quantity }}</td>
-              <td class="center">
-                ${{ (item.quantity * item.price).toFixed(2) }}
-              </td>
-              <td class="center">
-                <button
-                  class="btn btn-light cart-remove"
-                  @click="deleteFromCart(item.id)"
-                >
-                  &times;
-                </button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
 
         <p class="center">
           <em v-if="cartContent.length === 0">No items in cart</em>

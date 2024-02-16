@@ -21,11 +21,6 @@ export default {
   components: { CardComponent },
   name: "RecommendedComponent",
   props: ["inventory", "recommended", "addToCart"],
-  // data() {
-  //   return {
-  //     cards: this.inventory.filter(({ id }) => this.recommended.includes(id)),
-  //   };
-  // },
   computed: {
     cards() {
       const cards = this.inventory.filter(({ id }) =>

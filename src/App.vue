@@ -54,7 +54,6 @@ export default {
   computed: {
     numSelected() {
       return Object.keys(this.cart).length;
-      // return Object.values(this.cart).reduce((sum, num) => sum + num, 0);
     },
   },
   methods: {

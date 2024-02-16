@@ -10,7 +10,6 @@
 <script>
 import SplashComponent from "@/components/SplashComponent.vue";
 import RecommendedComponent from "@/components/RecommendedComponent.vue";
-// @ is an alias to /src
 
 export default {
   name: "HomeView",
